@@ -1,0 +1,48 @@
+<!-- /*
+============================================
+; Title: Assignment 4.4 – Async Pipe
+; Author: Dan Ross
+; Date: 23 Jan 2021
+; Modified By: Dan Ross
+; Description: This is the composer-list HTML display page.
+;===========================================
+*/ -->
+<div class="row">
+  <div class="col-sm-12">
+
+    <!-- This is our search field. It will filter the results of our table when we type in a name of a composer and only show the rows that match our query.  -->
+    <div class="textSearch">
+      <input type="text" id="txtSearch" class="form-control" placeholder="Search by name" [formControl]="txtSearchControl">
+    </div>
+
+    <!-- Start the composer table here -->
+    <table class="table table-bordered">
+      <!-- Start the composer headers here -->
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Composer ID</th>
+          <th scope="col">Full name</th>
+          <th scope="col">Genre</th>
+        </tr>
+      </thead>
+      <!-- End the composer headers here -->
+      <!-- This will loop over the list of composers from the composer.class.ts -->
+      <tbody *ngFor="let composer of composers | async">
+        <tr>
+          <td scope="row">
+            <!-- This is how we'll navigate to composer details component based on ID -->
+            <a routerLink="/composer-details/{{ composer.composerId }}">
+              {{ composer.composerId }}
+              <!-- This will display the composer ID. -->
+            </a>
+          </td>
+          <td scope="row">{{ composer.fullName }}</td>
+          <!-- This will display the composers full name. -->
+          <td>{{ composer.genre }}</td>
+          <!-- This will display the composers genre. -->
+        </tr>
+      </tbody>
+    </table>
+    <!-- End the composer table here -->
+  </div>
+</div>

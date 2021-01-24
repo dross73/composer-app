@@ -1,0 +1,15 @@
+/*
+============================================
+; Title: Assignment 4.4 – Async Pipe
+; Author: Dan Ross
+; Date: 23 Jan 2021
+; Modified By: Dan Ross
+; Description: This is our CSS file for the component list
+;===========================================
+*/
+/* This is the style for our text search container */
+.textSearch {
+  width: 30%;
+  float: right;
+  margin-bottom: 5px;
+}
