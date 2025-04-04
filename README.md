@@ -1,27 +1,58 @@
-# ComposerApp
+# Composer App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+A simple Angular project demonstrating the use of `async` pipes and component interaction. Built as part of an academic exercise and deployed via GitHub Pages.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## 🚀 Live Site
 
-## Code scaffolding
+🔗 [https://dross73.github.io/composer-app/](https://dross73.github.io/composer-app/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> ⚠️ **Note:** This app is hosted on GitHub Pages. There may be a brief delay (a few seconds) if the site has not been accessed recently, due to GitHub Pages caching and cold-loading behavior.
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## 🧰 Tech Stack
 
-## Running unit tests
+- Angular (v10+)
+- TypeScript
+- HTML/CSS
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## 📦 Development
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Serve Locally
 
-## Further help
+```bash
+ng serve
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Navigate to `http://localhost:4200/`. The app will auto-reload on file changes.
+
+### Build for Production
+
+```bash
+ng build --configuration production --base-href /composer-app/
+```
+
+This builds the project for GitHub Pages under the `/composer-app/` path.
+
+---
+
+## 🌐 Deployment
+
+Deployment is handled via the `angular-cli-ghpages` tool:
+
+```bash
+npx angular-cli-ghpages --dir=dist/composer-app
+```
+
+This publishes the production build to the `gh-pages` branch for GitHub Pages hosting.
+
+---
+
+## ✨ Author
+
+Dan Ross
+[GitHub](https://github.com/dross73)
